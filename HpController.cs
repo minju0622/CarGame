@@ -16,13 +16,17 @@ public class HpController : MonoBehaviour
 
     public void HpControl()
     {
-        hp.GetComponent<Image>().fillAmount -= 1.0f;
-            if (hp.GetComponent<Image> ().fillAmount <= 0)
+        hp.GetComponent<Image>().fillAmount -= 0.2f;
+        if (hp.GetComponent<Image>().fillAmount <= 0)
         {
-            SceneManager.LoadScene("race_track_lake");
+            SceneManager.LoadScene("OverScene");
         }
     }
 
+    public void HpControl2()
+    {
+        hp.GetComponent<Image>().fillAmount += 0.1f;
+    }
     // Update is called once per frame
     void Update()
     {
